@@ -1,0 +1,23 @@
+{
+    "AttributeDefinitions": [
+        {
+            "AttributeName": "id",
+            "AttributeType": "N"
+        }
+    ],
+    "TableName": "Fortune",
+    "KeySchema": [
+        {
+            "AttributeName": "id",
+            "KeyType": "HASH"
+        }
+    ],
+    "ProvisionedThroughput": {
+        "ReadCapacityUnits": 5,
+        "WriteCapacityUnits": 5
+    },
+    "StreamSpecification": {
+        "StreamEnabled": true,
+        "StreamViewType": "KEYS_ONLY"
+    }
+}
